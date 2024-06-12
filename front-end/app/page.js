@@ -18,11 +18,14 @@ export default function Page() {
   const router = useRouter();
 
   const handleLogin = () => {
-    router.push("/profile");
+
+    router.push("/profile/createprofile");
   };
+
   return (
     <>
-      <h1>Casdoor Nextjs-Auth example</h1>
+    `<h1>Homepage</h1>
+      <h1>Login to see more...</h1>
       <button onClick={handleLogin}>Login</button>
     </>
   );

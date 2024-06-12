@@ -22,9 +22,13 @@ export default function Page() {
   const userJson = user ? JSON.parse(user) : {};
 
   const handleLogout = () => {
-    Cookies.remove("casdoorUser");
-    router.push("/");
+      Cookies.remove("casdoorUser");
+      router.push("/");
   };
+
+  const handleCreate = () => {
+    router.push("/profile/createprofile");
+};
 
   return (
     <>
@@ -55,6 +59,7 @@ export default function Page() {
         </table>
         <br/>
         <button onClick={handleLogout}>Logout</button>
+        <button onClick={handleCreate}>Add Profile</button>
       </div>
     </>
   );
